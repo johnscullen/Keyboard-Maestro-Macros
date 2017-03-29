@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>512252410.15463901</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string># Author: John Scullen
+# Date: 2017-03-01
+
+Converts URLs to other sites to HTML references with target="_blank" option. Replace "mydomain" with the name of your domain.
+
+Only handles markdown with in-line references. Footnote style references not supported.</string>
+						<key>Title</key>
+						<string>Convert external links in the clipboard to HTML links that open in a new window</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>IgnoreCaseRegEx</string>
+						<key>MacroActionType</key>
+						<string>SearchReplaceClipboard</string>
+						<key>Replace</key>
+						<string>&lt;a href=$2 target="_blank"&gt;$1&lt;/a&gt;</string>
+						<key>Search</key>
+						<string>\[([^\]]+)\]\((?!https?://mydomain\.)(.+?)\)</string>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>98FCD28E-27F6-41C1-A660-1A5E3A6B0D92</string>
+						<key>TargetUseNamedClipboard</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.5</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>487652369.91164398</real>
+				<key>CustomIconData</key>
+				<string>KMEP-Right</string>
+				<key>ModificationDate</key>
+				<real>512252944.44355202</real>
+				<key>Name</key>
+				<string>Convert - Rewrite markdown links to external sites as HTML</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>7EB9B902-9A84-44A5-A201-E54B730539C2</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>zzz Demo</string>
+		<key>ToggleMacroUID</key>
+		<string>B5388BF8-2FD9-4F5E-BEAD-086FFDA5EEDB</string>
+		<key>UID</key>
+		<string>DA05966F-EB31-4E7D-89E0-9F42DFFCEA8D</string>
+	</dict>
+</array>
+</plist>
